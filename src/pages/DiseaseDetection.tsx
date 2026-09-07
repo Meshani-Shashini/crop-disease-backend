@@ -17,7 +17,7 @@ import {
 
 // Live Vercel backend endpoint; VITE_API_URL can override it for local development.
 const apiUrl = import.meta.env.VITE_API_URL
-  || 'https://crop-disease-backend-1hwg237zi-msshani1209-2176s-projects.vercel.app';
+  || 'https://crop-disease-backend.vercel.app';
 const colabAuth = import.meta.env.VITE_COLAB_AUTH || "";
 
 const getSeverity = (prediction: { disease?: string; severity?: string }, fallback?: string) => {
