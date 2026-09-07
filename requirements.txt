@@ -1,7 +1,6 @@
-flask
+Flask
 flask-cors
-tflite-runtime
+supabase
 pillow
 numpy
-gunicorn
-supabase
+tensorflow-cpu
