@@ -147,7 +147,7 @@ def error_response(message: str, status_code: int):
 
 @app.route("/", methods=["GET"])
 def home():
-    return jsonify({"status": "success", "message": "Crop disease detection API is running."})
+    return jsonify({"status": "success", "message": "Crop Disease Backend is Running Successfully!"})
 
 
 @app.route("/health", methods=["GET"])

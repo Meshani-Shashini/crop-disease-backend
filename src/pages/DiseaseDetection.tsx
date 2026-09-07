@@ -15,8 +15,9 @@ import {
   Image as ImageIcon,
 } from 'lucide-react';
 
-// Colab LocalTunnel backend endpoint
-const colabUrl = import.meta.env.VITE_COLAB_URL || "https://two-seas-stop.loca.lt";
+// Live Vercel backend endpoint; VITE_COLAB_URL remains available as an override.
+const apiUrl = import.meta.env.VITE_COLAB_URL
+  || 'https://crop-disease-backend-1hwg237zi-msshani1209-2176s-projects.vercel.app';
 const colabAuth = import.meta.env.VITE_COLAB_AUTH || "";
 
 const getSeverity = (prediction: { disease?: string; severity?: string }, fallback?: string) => {
@@ -160,7 +161,7 @@ export default function DiseaseDetection() {
         fetchHeaders['Authorization'] = `Bearer ${colabAuth}`;
       }
 
-      const response = await fetch(colabUrl, {
+      const response = await fetch(`${apiUrl}/predict`, {
         method: 'POST',
         headers: fetchHeaders,
         body: formData,
