@@ -3,4 +3,4 @@ flask-cors
 supabase
 pillow
 numpy
-tensorflow-cpu
+tflite-runtime-nightly
