@@ -15,8 +15,8 @@ import {
   Image as ImageIcon,
 } from 'lucide-react';
 
-// Live Vercel backend endpoint; VITE_COLAB_URL remains available as an override.
-const apiUrl = import.meta.env.VITE_COLAB_URL
+// Live Vercel backend endpoint; VITE_API_URL can override it for local development.
+const apiUrl = import.meta.env.VITE_API_URL
   || 'https://crop-disease-backend-1hwg237zi-msshani1209-2176s-projects.vercel.app';
 const colabAuth = import.meta.env.VITE_COLAB_AUTH || "";
 
