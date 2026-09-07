@@ -3,4 +3,4 @@ flask-cors
 supabase
 pillow
 numpy
-tflite-runtime-nightly
+ai-edge-litert==2.2.0

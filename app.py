@@ -10,8 +10,8 @@ import numpy as np
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from PIL import Image, UnidentifiedImageError
-# Heavy tensorflow වෙනුවට lightweight tflite_runtime import කරගැනීම
-import tflite_runtime.interpreter as tflite
+# Use the Python 3.12-compatible LiteRT runtime for the .tflite model.
+from ai_edge_litert import interpreter as tflite
 from werkzeug.exceptions import RequestEntityTooLarge
 
 # H5 Model එක වෙනුවට .tflite model එකේ path එක ලබාදීම
